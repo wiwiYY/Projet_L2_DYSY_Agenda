@@ -1,0 +1,125 @@
+
+/*les suivante influt sur les élément de facon genéral sur dans la balise body*/
+body {
+  background: #efefef;
+  font-weight: 300;
+  color: #B6B6B6;                   /* GRIS pour les ecriture*/
+}
+body, html {
+  padding:  0;
+  margin: 0;
+}
+
+
+/*ici nous structurons le élément section qui se trouve dans body */
+body section {
+  background: white;
+  margin: 60px auto 120px;
+  border-top: 20px solid #313A3D;   /*bleue foncé pour la bare du haut */
+  text-align: center;
+  padding: 50px 0 110px;
+  width: 80%;
+  max-width: 1100px;
+  min-width: 800px;
+}
+
+/*le titre h1 */
+body section h1 {
+  margin-bottom: 40px;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*tous d'abord le la balise form de facon général
+  pour la taille des elements à l'intérieur et qui soit bien centré */
+form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/*Taille des paragraphe*/
+p{
+
+  font-size: 1em;
+}
+
+/*selection tous les éléments de div et les modifie la taille*/
+form div {
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #313A3D;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 15px;
+  letter-spacing: 0.075em;
+}
+/*Met en forme le bouton pour  "CONTACTEZ NOUS " */
+form input[type="submit"] {
+  background: #FD9638;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 13px 50px;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  font-family: Georgia, serif;
+}
+/*Change la coleur lors du survole du boutton "CONTACTEZ NOUS "*/
+form input[type="submit"]:hover {
+  background: #313A3D;
+  color: #FD9638;
+}
+
+form input[type="submit"]:focus {
+  outline: none;
+  background: #cd6302;
+}
+
+
+.lin:link { 
+text-decoration:none; 
+} 
+.footer {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+    width: 100%;
+    min-width: 720px;/*taille minimum, attention non compatible avec @media sceen*/
+    background-color: #252525;
+    height: 230px;
+    color: white;
+    padding-top: 4.35238095em;
+    padding-bottom: 2.85238095em;
+    text-align: center;
+    font-size: 1.2em;
+}
+.headingblock {
+    padding-bottom: 50px;
+}
+.headingblock a {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.sociallist {
+    padding-bottom: 20px;
+}
+.sociallist a {
+    padding-left: 13px;
+    padding-right: 13px;
+}
+#lastcontainer {
+    justify-content: center;
+    display: flex;
+}
+.lin {
+    color: white;
+}
+.lin:visited, .lin:hover, .lin:focus, .lin:active {
+    color: white;
+}

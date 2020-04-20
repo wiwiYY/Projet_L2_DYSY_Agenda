@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.8.4
+- https://www.phpmyadmin.net
+-
+- Hôte : 127.0.0.1:3306
+- Généré le :  jeu. 04 avr. 2019 à 12:59
+- Version du serveur :  5.7.24
+- Version de PHP :  7.2.14
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="dysy_db" collation="utf8_general_ci" charset="utf8">
+            <pma:table name="events">
+                CREATE TABLE `events` (
+                  `id_events` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(255) NOT NULL,
+                  `begining` datetime NOT NULL,
+                  `ending` datetime NOT NULL,
+                  `comment` varchar(255) DEFAULT NULL,
+                  `id_user` int(11) DEFAULT NULL,
+                  `color` varchar(20) NOT NULL DEFAULT '#0071c5',
+                  PRIMARY KEY (`id_events`),
+                  KEY `id_user` (`id_user`),
+                  CONSTRAINT `events_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+            </pma:table>
+            <pma:table name="users">
+                CREATE TABLE `users` (
+                  `id_user` int(11) NOT NULL AUTO_INCREMENT,
+                  `name` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+                  `firstname` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+                  `email` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+                  `password` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
+                  PRIMARY KEY (`id_user`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de données :  'dysy_db'
+    -->
+    <database name="dysy_db">
+        <!-- Table events -->
+        <table name="events">
+            <column name="id_events">1</column>
+            <column name="name">Test1</column>
+            <column name="begining">2019-04-01 01:01:00</column>
+            <column name="ending">2019-04-02 02:02:00</column>
+            <column name="comment">Premier test</column>
+            <column name="id_user">1</column>
+            <column name="color">#0071c5</column>
+        </table>
+        <table name="events">
+            <column name="id_events">3</column>
+            <column name="name">Test2bis</column>
+            <column name="begining">2019-04-03 01:58:00</column>
+            <column name="ending">2019-04-01 02:02:00</column>
+            <column name="comment">Test2bis</column>
+            <column name="id_user">1</column>
+            <column name="color">#FFD700</column>
+        </table>
+        <table name="events">
+            <column name="id_events">4</column>
+            <column name="name">Test3</column>
+            <column name="begining">2019-04-01 01:01:00</column>
+            <column name="ending">2019-04-07 02:02:00</column>
+            <column name="comment">Test3</column>
+            <column name="id_user">2</column>
+            <column name="color">#008000</column>
+        </table>
+        <table name="events">
+            <column name="id_events">5</column>
+            <column name="name">Test Bouton addevent 2</column>
+            <column name="begining">2019-04-03 01:01:00</column>
+            <column name="ending">2019-04-04 02:02:00</column>
+            <column name="comment">azertyuiop</column>
+            <column name="id_user">4</column>
+            <column name="color">#40E0D0</column>
+        </table>
+        <table name="events">
+            <column name="id_events">6</column>
+            <column name="name">yyytest</column>
+            <column name="begining">2019-04-08 14:15:00</column>
+            <column name="ending">2019-04-21 21:06:00</column>
+            <column name="comment">Test2 btn OK</column>
+            <column name="id_user">3</column>
+            <column name="color">#40E0D0</column>
+        </table>
+        <table name="events">
+            <column name="id_events">7</column>
+            <column name="name">test</column>
+            <column name="begining">2019-04-11 04:05:00</column>
+            <column name="ending">2019-04-11 14:04:00</column>
+            <column name="comment">dcfvgbhnj,k</column>
+            <column name="id_user">4</column>
+            <column name="color">#40E0D0</column>
+        </table>
+        <table name="events">
+            <column name="id_events">8</column>
+            <column name="name">test 2</column>
+            <column name="begining">2019-04-19 11:11:00</column>
+            <column name="ending">2019-04-20 21:59:00</column>
+            <column name="comment">wxcvbn,</column>
+            <column name="id_user">4</column>
+            <column name="color">#000</column>
+        </table>
+        <!-- Table users -->
+        <table name="users">
+            <column name="id_user">1</column>
+            <column name="name">Test</column>
+            <column name="firstname">William</column>
+            <column name="email">test@hotmail.fr</column>
+            <column name="password">f7c3bc1d808e04732adf679965ccc34ca7ae3441</column>
+        </table>
+        <table name="users">
+            <column name="id_user">2</column>
+            <column name="name">Test2</column>
+            <column name="firstname">Willy</column>
+            <column name="email">test2@hotmail.fr</column>
+            <column name="password">7c222fb2927d828af22f592134e8932480637c0d</column>
+        </table>
+        <table name="users">
+            <column name="id_user">3</column>
+            <column name="name">Test3</column>
+            <column name="firstname">Wii</column>
+            <column name="email">test3@hotmail.fr</column>
+            <column name="password">7c222fb2927d828af22f592134e8932480637c0d</column>
+        </table>
+        <table name="users">
+            <column name="id_user">4</column>
+            <column name="name">Testf</column>
+            <column name="firstname">TestF</column>
+            <column name="email">testf@hotmail.fr</column>
+            <column name="password">7c222fb2927d828af22f592134e8932480637c0d</column>
+        </table>
+    </database>
+</pma_xml_export>

@@ -1,0 +1,77 @@
+body, html {
+	padding:  0;
+	margin: 0;
+
+}
+
+.menu a, .menu a:hover {
+	text-decoration: none;
+}
+
+.containerfluid {
+	padding: 0;
+}
+
+/* mainContain */
+.mainContain{
+	display: flex;
+	flex-direction: column;
+}
+
+/* for superposition*/
+/*position du contenu text*/
+.firstContain, .secondContain, .thirdContain, .fourthContain{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.firstContain{
+    background-image: url(../assets/odeon.jpg);
+}
+.secondContain{
+    background-image: url(../assets/image1.jpg);
+}
+.thirdContain{
+    background-image: url(../assets/havre_caumartin.jpg);
+}
+.fourthContain{
+    background-image: url(../assets/champs_elyse.jpg);
+}
+.text1, .text2, .text3, .text4{
+	z-index: 3;
+	font-size: 45px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	/*color*/
+	color: white;
+    text-shadow: black 3px 3px 3px;
+}
+
+@media screen and (max-width: 1250px){
+    .firstContain, .secondContain, .thirdContain, .fourthContain{
+        height: 400px;
+        min-width: 720px;
+    }
+    .text1, .text2, .text3, .text4{
+        font-size: 35px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
